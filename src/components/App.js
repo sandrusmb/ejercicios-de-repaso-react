@@ -1,25 +1,26 @@
 import React from "react";
-import logo from "../images/logo.svg";
-import "../stylesheets/App.css";
+//import logo from "../images/logo.svg";
+import "../stylesheets/App.scss";
+import Header from "./Header";
+import ShowDummy from "./ShowDummy";
+import ShowClass from "./ShowClass";
+
+const api = [
+  {
+    name: "Lost"
+  },
+  {
+    name: "Aída"
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hola</p>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      Hola Mundo!!
+      <Header />
+      <ShowDummy name={api[0].name} genero="comedy" />
+      <ShowClass name="Dexter" genero="drama" />
     </div>
   );
 }
